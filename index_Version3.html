@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Leonardo Campos - Advocacia Criminal</title>
+    <meta name="description" content="Especialista em defesa criminal estratégica. Solicite pré-atendimento com Dr. Leonardo Campos, advogado criminalista.">
+    <meta name="keywords" content="advogado criminal, direito penal, júri, habeas corpus, liberdade provisória, assessoria jurídica">
+    <!-- Font Awesome 6 CDN corrigido -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', 'Georgia', serif;
+            color: #223;
+            background-color: #f3f6fa;
+        }
+        :root {
+            --primary: #1a365d;
+            --secondary: #cda45e;
+            --accent: #457b9d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --card-shadow: 0 5px 25px rgba(26, 54, 93, 0.10);
+        }
+        /* Header Moderno */
+        header {
+            background: linear-gradient(90deg, var(--primary) 70%, var(--accent) 100%);
+            color: #fff;
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 1px 6px rgba(26, 54, 93, 0.18);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo i {
+            font-size: 1.6rem;
+            color: var(--secondary);
+        }
+        /* Hero Section Moderna */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(26, 54, 93, 0.88), rgba(69, 123, 157, 0.73)),
+                url('https://images.unsplash.com/photo-1518464069543-4c7bfa4a6a0c?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 90px;
+            position: relative;
+        }
+        .hero-content {
+            animation: fadein 1s;
+        }
+        @keyframes fadein { from { opacity:0; } to { opacity:1; } }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--secondary) 70%, #d5ad6d 100%);
+            color: var(--dark);
+            padding: 14px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            box-shadow: 0 2px 10px rgba(205,164,94,0.08);
+            transition: all 0.3s;
+            border: none;
+        }
+        .btn i { margin-right:8px; }
+        .btn:hover {
+            background: linear-gradient(90deg, #b38a4a 70%, #e4c590 100%);
+            transform: scale(1.05) translateY(-2px);
+        }
+        /* Área de Atuação com Ícones */
+        .services {
+            padding: 5rem 0 3rem 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: #fff;
+            padding: 2.2rem 1.2rem 2.2rem 1.2rem;
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 35px rgba(26,54,93,0.16);
+        }
+        .service-card i {
+            font-size: 2.6rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+        .service-card p {
+            font-size: 1.05rem;
+            color: #444;
+        }
+        /* Formulário Moderno */
+        .form-section {
+            background: linear-gradient(90deg, #f8f9fa 60%, #eaf0fa 100%);
+            padding: 5rem 0;
+        }
+        .form-container {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--card-shadow);
+            border-radius: 14px;
+            background: #fff;
+            animation: fadein 1.4s;
+        }
+        .form-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+        .form-group {
+            margin-bottom: 1.4rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d0d8e5;
+            border-radius: 5px;
+            font-family: 'Segoe UI', 'Georgia', serif;
+            font-size: 1rem;
+            background: #f6f8fc;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        .form-group textarea {
+            height: 110px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, var(--primary) 70%, var(--accent) 100%);
+            color: #fff;
+            border: none;
+            padding: 16px 0;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            width: 100%;
+            font-size: 1.13rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #0f2a4a 70%, #457b9d 100%);
+            transform: scale(1.03);
+        }
+        /* Contato Moderno */
+        .contact {
+            background: linear-gradient(90deg, var(--primary) 70%, var(--accent) 100%);
+            color: #fff;
+            padding: 4rem 0 3rem 0;
+            text-align: center;
+        }
+        .contact-info {
+            margin-top: 2rem;
+        }
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.07rem;
+        }
+        .contact .btn {
+            margin-top: 18px;
+            background: linear-gradient(90deg, #25d366 70%, #128c7e 100%);
+            color: #fff;
+        }
+        .contact .btn:hover {
+            background: linear-gradient(90deg, #128c7e 70%, #25d366 100%);
+        }
+        /* WhatsApp Bubble */
+        .whatsapp-bubble {
+            position: fixed;
+            right: 28px;
+            bottom: 30px;
+            z-index: 9999;
+        }
+        .whatsapp-bubble a {
+            display: flex;
+            align-items: center;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            justify-content: center;
+            font-size: 2.1rem;
+            box-shadow: 0 2px 18px rgba(37,211,102,0.25);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .whatsapp-bubble a:hover {
+            background: #128c7e;
+            transform: scale(1.08);
+        }
+        /* Footer Moderno */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.98rem;
+            letter-spacing: 1px;
+        }
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .hero-content h1 { font-size: 2.1rem; }
+            .service-grid { grid-template-columns: 1fr; }
+            .form-container { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo"><i class="fa-solid fa-balance-scale"></i> Dr. Leonardo Campos</div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fa-solid fa-gavel"></i> Defesa Criminal Estratégica</h1>
+                <p>Especialista em direito penal: atendimento técnico, personalizado e ágil em todas as fases do processo criminal.</p>
+                <a href="#formulario" class="btn"><i class="fa-solid fa-file-signature"></i> Solicitar Pré-Atendimento</a>
+            </div>
+        </div>
+    </section>
+    <!-- Serviços -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> Áreas de Atuação</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Defesa em Tribunal do Júri</h3>
+                    <p>Estratégia avançada para crimes contra a vida, com preparação completa e atuação no plenário do júri.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <h3>Liberdade Provisória</h3>
+                    <p>Atuação imediata para revogação de prisões ilegais e obtenção de liberdade provisória.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3>Habeas Corpus</h3>
+                    <p>Impetração de remédios constitucionais para proteção da liberdade individual.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-search"></i>
+                    <h3>Defesa em Inquéritos</h3>
+                    <p>Atuação preventiva desde a fase investigatória para evitar denúncias infundadas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Recursos Criminais</h3>
+                    <p>Recursos jurídicos sólidos para tribunais superiores, buscando reversão de decisões injustas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Assessoria Preventiva</h3>
+                    <p>Orientação jurídica para evitar implicações criminais em atividades profissionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Formulário de Pré-Atendimento -->
+    <section class="form-section" id="formulario">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title"><i class="fa-solid fa-file-contract"></i> Pré-Atendimento</h2>
+                <form id="preAtendimentoForm" action="https://formsubmit.co/camposleob@gmail.com" method="POST">
+                    <!-- Configurações do FormSubmit -->
+                    <input type="hidden" name="_next" value="URL_DE_REDIRECIONAMENTO"> <!-- Substitua pela sua URL -->
+                    <input type="hidden" name="_subject" value="Novo Pré-Atendimento - Dr. Leonardo Campos">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Campos do Formulário -->
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" name="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="Telefone" placeholder="(21) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="caso">Tipo de Caso*</label>
+                        <select id="caso" name="Tipo_de_Caso" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Defesa em Tribunal do Júri">Defesa em Tribunal do Júri</option>
+                            <option value="Liberdade Provisória">Liberdade Provisória</option>
+                            <option value="Habeas Corpus">Habeas Corpus</option>
+                            <option value="Defesa em Inquérito">Defesa em Inquérito</option>
+                            <option value="Recurso Criminal">Recurso Criminal</option>
+                            <option value="Assessoria Preventiva">Assessoria Preventiva</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="detalhes">Detalhes do Caso*</label>
+                        <textarea id="detalhes" name="Detalhes_do_Caso" placeholder="Descreva brevemente sua situação..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contato -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title"><i class="fa-solid fa-phone-volume"></i> Contato Direto</h2>
+            <div class="contact-info">
+                <p><strong>Advogado Criminalista</strong></p>
+                <p>Dr. Leonardo Barbosa Campos</p>
+                <p>OAB/RJ 231.909</p>
+                <p><strong>Telefone:</strong> (21) 97467-2149</p>
+                <a href="https://wa.me/5521974672149" class="btn"><i class="fa-brands fa-whatsapp"></i> Conversar pelo WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    <!-- WhatsApp Bubble -->
+    <div class="whatsapp-bubble">
+        <a href="https://wa.me/5521974672149" title="Fale direto pelo WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Dr. Leonardo Barbosa Campos - OAB/RJ 231.909</p>
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <!-- JS: Validação Formulário -->
+    <script>
+        document.getElementById('preAtendimentoForm').addEventListener('submit', function(e) {
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const telefoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}$/;
+            if (!telefoneRegex.test(telefone)) {
+                alert('Por favor, insira um telefone válido com DDD');
+                e.preventDefault();
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, insira um e-mail válido');
+                e.preventDefault();
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
